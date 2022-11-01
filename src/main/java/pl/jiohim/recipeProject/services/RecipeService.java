@@ -1,7 +1,7 @@
 package pl.jiohim.recipeProject.services;
 
 import org.springframework.stereotype.Service;
-import pl.jiohim.recipeProject.dao.RecipeRepository;
+import pl.jiohim.recipeProject.repositories.RecipeRepository;
 
 import java.util.Optional;
 
