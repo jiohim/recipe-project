@@ -1,13 +1,16 @@
 package pl.jiohim.recipeProject.services;
 
 import org.springframework.stereotype.Service;
+import pl.jiohim.recipeProject.domain.Recipe;
 import pl.jiohim.recipeProject.repositories.RecipeRepository;
 
-import java.util.Optional;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Service
-public class RecipeService implements StringService{
+public class RecipeService implements StringService {
+
     private final RecipeRepository repository;
 
     public RecipeService(RecipeRepository repository) {
@@ -15,8 +18,10 @@ public class RecipeService implements StringService{
     }
 
 
-    public Optional randomRecipe(int id) {
+    public Set<Recipe> getRecipes() {
+        Set<Recipe> recipeSet = new HashSet<>();
+        repository.findAll().iterator().forEachRemaining(recipeSet::add);
 
-        return null;//repository.findById(id);
+        return recipeSet;
     }
 }
