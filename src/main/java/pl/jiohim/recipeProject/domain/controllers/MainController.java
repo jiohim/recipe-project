@@ -1,4 +1,4 @@
-package pl.jiohim.recipeProject.controllers;
+package pl.jiohim.recipeProject.domain.controllers;
 
 
 import org.springframework.stereotype.Controller;
@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import pl.jiohim.recipeProject.domain.Category;
 import pl.jiohim.recipeProject.repositories.CategoryRepository;
 import pl.jiohim.recipeProject.repositories.UnitOfMeasureRepository;
-import pl.jiohim.recipeProject.services.RecipeService;
-import pl.jiohim.recipeProject.services.StringService;
 
 import java.util.Optional;
 
